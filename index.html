@@ -22,6 +22,7 @@
                 return (
                     <div>
                         <h1>James is learning React {props.data}</h1>
+                        <Button />
                         <Footer />
                     </div>
                 );
@@ -32,6 +33,15 @@
                     <footer>
                         <p>This is a footer</p>
                     </footer>
+                );
+            }
+
+            function Button() {
+                return (
+                    <button>
+                        Click me
+                    </button>
+
                 );
             }
 
