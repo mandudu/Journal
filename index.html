@@ -1,0 +1,46 @@
+<html>
+    <body>
+        <div id="app">
+
+        </div>
+
+        <!-- Import React -->
+         <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+         <!-- Import React DOM -->
+          <!-- Why do we need to import React's DOM separately? Because React is a library for building user interfaces, and it's not a framework. -->
+
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+        <!-- Import Babel -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+        <script type="text/jsx">
+            const app = document.getElementById('app');
+            const data = 123;
+
+            function Header(props) {
+                return (
+                    <div>
+                        <h1>James is learning React {props.data}</h1>
+                        <Footer />
+                    </div>
+                );
+            }
+
+            function Footer() {
+                return (
+                    <footer>
+                        <p>This is a footer</p>
+                    </footer>
+                );
+            }
+
+            const root = ReactDOM.createRoot(app);
+            {/* The below is called a prop. It's a way to pass data to a component. */}
+            root.render(<Header data={data} />);
+
+        </script>
+
+        <!-- The lesson here is that we can use JS to change the DOM, and we don't have to write nasty HTML -->
+    </body>
+</html>
