@@ -18,10 +18,17 @@
             const app = document.getElementById('app');
             const data = 123;
 
+            function async handleClick() {
+                // i want to change the data variable and get it from the backend
+                <!-- console.log("hello"); -->
+                await fetch("http://localhost:3000/data")
+            }
+
             function Header(props) {
                 return (
                     <div>
-                        <h1>James is learning React {props.data}</h1>
+                        <h1>James is learning React </h1>
+                        <p>The data is {props.data}</p>
                         <Button />
                         <Footer />
                     </div>
@@ -30,15 +37,15 @@
 
             function Footer() {
                 return (
-                    <footer>
-                        <p>This is a footer</p>
-                    </footer>
+                    <div>
+                        <p>This is a footer</p>                    
+                    </div>
                 );
             }
 
             function Button() {
                 return (
-                    <button>
+                    <button onClick={handleClick}>
                         Click me
                     </button>
 
